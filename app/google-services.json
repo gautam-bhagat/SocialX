@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "186521689690",
+    "project_id": "socialx-4f1a8",
+    "storage_bucket": "socialx-4f1a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186521689690:android:e810be6b0690a5fb604263",
+        "android_client_info": {
+          "package_name": "com.gautam.socialx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186521689690-a76ih6thmk3ka44lc7scs6cspf7uqlaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiIGCByHoHGa29JtlRuDos60g65f7w2PM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186521689690-a76ih6thmk3ka44lc7scs6cspf7uqlaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SocialX</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="i_agree_to_terms_and_conditions">I agree to <span style="color:red"><b><u>terms and conditions</u></b></span></string>
+    <string name="already_have_an_account_sign_in">Already Have an Account? <span style="color:red"><b>Sign in !</b></span></string>
+    <string name="socialx_logo_text">social<span style="font-size:30px"><b> X </b></span></string>
+    <string name="signin_to_your_account">Sign in to your Account</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="don_t_have_an_account_register_now">Don\'t Have an Account? <b>Register Now</b></string>
+    <string name="search_in_feed">Search in feed</string>
+    <string name="facebook_app_id">786746745679404</string>
+    <string name="fb_login_protocol_scheme">fb786746745679404</string>
+    <string name="facebook_client_token">5af4c89b198a44b456813739d256ee30</string>
+
+
+</resources>
