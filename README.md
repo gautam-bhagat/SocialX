@@ -1,9 +1,9 @@
 # SocialX
 
-<video width="320" controls>
-  <source src="https://res.cloudinary.com/gautamportfolio/video/upload/v1659330516/VN20220801_103113_frvrmd.mp4" type="video/mp4">
-  
-Your browser does not support the video tag.
-</video>
+A simple news using <b>Java, Android</b> and <b>Firebase</b>. The Project is a <b>Full Stack Java Project</b>. UI/UX is designed using <b>XML</b>.
 
-## Libraries used
+## Scope
+Using the fundamentals of the project advanced system can be designed with more advanced news algorithm and News Fundamentals.
+
+### Output
+<video src="video.mp4" width=700>
