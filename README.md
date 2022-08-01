@@ -7,3 +7,6 @@ Using the fundamentals of the project advanced system can be designed with more 
 
 ### Output
 <video src="video.mp4" width=700>
+
+### Libraries
+
