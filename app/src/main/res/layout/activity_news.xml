@@ -32,8 +32,8 @@
                     <TextView
                         android:textSize="24sp"
                         android:id="@+id/news_headline"
-                        android:fontFamily="@font/poppins_medium_ttf"
-                        android:text="Headline"
+                        android:fontFamily="@font/poppins_bold_ttf"
+
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -50,8 +50,7 @@
                         android:textSize="16sp"
                         android:textColor="@color/blue_900"
                         android:fontFamily="@font/poppins_ttf"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="Gautam Bhagat"/>
+                        android:layout_marginTop="@dimen/_5sdp"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -59,8 +58,7 @@
                         android:textSize="16sp"
                         android:textColor="@color/blue_900"
                         android:fontFamily="@font/poppins_ttf"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="Gautam Bhagat"/>
+                        android:layout_marginTop="@dimen/_5sdp"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -70,17 +68,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:fontFamily="@font/poppins_ttf"
-                android:text="@string/lorem_ipsum50"
+                android:fontFamily="@font/poppins_semibold_ttf"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
             <TextView
                 android:id="@+id/news_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:fontFamily="@font/poppins_ttf"
-                android:text="@string/lorem_ipsum50"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>

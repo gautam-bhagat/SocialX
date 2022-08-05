@@ -29,7 +29,7 @@ public class NewsActivity extends AppCompatActivity {
         news.newsHeadline.setText(articles.getTitle());
         if(articles.getUrlToImage() != null)
             Glide.with(getApplicationContext()).load(articles.getUrlToImage()).into(news.newsImage);
-        news.newsHeadline.setText(articles.getAuthor());
+        news.newsAuthor.setText(articles.getAuthor());
         news.newsTime.setText(articles.getPublishedAt());
         news.newsDetail.setText(articles.getDescription());
         news.newsContent.setText(articles.getContent());
