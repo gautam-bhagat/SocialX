@@ -9,10 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.gautam.socialx.R;
+import com.gautam.socialx.api.SelectListener;
 import com.gautam.socialx.model.Articles;
 
 import java.text.ParseException;
@@ -25,10 +27,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 {
     List<Articles> dataNewsModelList;
     Context context;
+    SelectListener selectListener;
 
-    public NewsAdapter(Context context, List<Articles> dataNewsModelList) {
+    public NewsAdapter(Context context, List<Articles> dataNewsModelList, SelectListener selectListener) {
         this.context=context;
         this.dataNewsModelList = dataNewsModelList;
+         this.selectListener = selectListener;
 //        Log.d("TAG", "NewsAdapter: "+dataNewsModelList.get(0).getTitle());
     }
 
@@ -54,7 +58,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             Glide.with(context).load(current_pos_data.getUrlToImage()).into(holder.news_img);
         }
         holder.time_source.setText(getHoursDiff(current_pos_data.getPublishedAt())+" "+current_pos_data.getSource().getName());
-
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectListener.OnNewsClicked(current_pos_data);
+            }
+        });
     }
 
     private String getHoursDiff(String publishedAt)
@@ -101,11 +110,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public class NewsViewHolder extends RecyclerView.ViewHolder{
 
         TextView title,time_source,description;
+        CardView cardView;
         ImageView news_img;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title_news);
+            cardView = itemView.findViewById(R.id.cardView);
             time_source = itemView.findViewById(R.id.time_source);
             description = itemView.findViewById(R.id.description_news);
             news_img = itemView.findViewById(R.id.news_img);

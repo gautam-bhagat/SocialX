@@ -8,6 +8,7 @@ import android.os.Handler;
 
 import com.facebook.AccessToken;
 import com.gautam.socialx.R;
+import com.gautam.socialx.Shared.SharedPref;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -35,7 +36,7 @@ FirebaseAuth firebaseAuth;
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        if(firebaseAuth.getCurrentUser()!=null)
+        /*if(firebaseAuth.getCurrentUser()!=null)
         {
             loggedIn = true;
         }
@@ -48,11 +49,11 @@ FirebaseAuth firebaseAuth;
             loggedIn = false;
 
         }
-
+*/
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(loggedIn){
+                if(SharedPref.sharedPref(getApplicationContext()).getLOGGED()){
 
                     Intent i=new Intent(SplashScreen.this, HomeActivity.class);
                     startActivity(i);
@@ -63,7 +64,9 @@ FirebaseAuth firebaseAuth;
                     finish();}
             }
         }, SPLASH_SCREEN_TIME_OUT);
-    } private void createGoogleReq() {
+    }
+
+    private void createGoogleReq() {
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();

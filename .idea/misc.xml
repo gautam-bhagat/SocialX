@@ -8,6 +8,7 @@
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/button_bg_toprounded.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/email.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/lock.xml" value="0.2520833333333333" />
+        <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/logout.xml" value="0.16875" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/person.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/phone.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/search_icon_news_feed.xml" value="0.120703125" />
@@ -15,6 +16,7 @@
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/drawable/squircle_bottom_rounded.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/layout/activity_home.xml" value="0.18" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/layout/activity_login.xml" value="0.1609375" />
+        <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/layout/activity_news.xml" value="0.1234375" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/layout/activity_signup.xml" value="0.1638888888888889" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/GAUTAM BHAGAT/AndroidStudioProjects/SocialX/app/src/main/res/layout/news_single_row.xml" value="0.25" />

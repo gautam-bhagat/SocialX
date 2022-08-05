@@ -1,8 +1,9 @@
 package com.gautam.socialx.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class NewsResponse {
+public class NewsResponse implements Serializable {
     String status;
     int totalResults;
     List<Articles> articles;

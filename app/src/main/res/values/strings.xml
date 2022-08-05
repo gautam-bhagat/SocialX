@@ -11,6 +11,7 @@
     <string name="facebook_app_id">786746745679404</string>
     <string name="fb_login_protocol_scheme">fb786746745679404</string>
     <string name="facebook_client_token">5af4c89b198a44b456813739d256ee30</string>
+    <string name="lorem_ipsum50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae nisl magna. Morbi eu sem vel velit dignissim efficitur eu ut elit. Sed sed feugiat erat. Nunc eget nibh viverra neque congue aliquam quis eget leo. Fusce sed efficitur odio. Vestibulum luctus, ligula nec finibus pharetra, eros nisl ornare purus.</string>
 
 
 </resources>

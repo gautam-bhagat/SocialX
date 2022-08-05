@@ -15,6 +15,7 @@ import com.facebook.FacebookException;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.gautam.socialx.R;
+import com.gautam.socialx.Shared.SharedPref;
 import com.gautam.socialx.api.SignupListener;
 import com.gautam.socialx.databinding.ActivityLoginBinding;
 import com.gautam.socialx.viewmodels.LoginViewModel;
@@ -106,8 +107,7 @@ public class Login extends AppCompatActivity {
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
-                        startActivity(new Intent(getApplicationContext(),HomeActivity.class));
-                        finish();
+                        goToHomePage();
                     }
 
                     @Override
@@ -165,6 +165,7 @@ public class Login extends AppCompatActivity {
 
     private void goToHomePage() {
 
+        SharedPref.sharedPref(getApplicationContext()).setLOGGED(true);
         startActivity(new Intent(getApplicationContext(),HomeActivity.class));
         finish();
     }
@@ -201,15 +202,16 @@ public class Login extends AppCompatActivity {
     private final SignupListener signupListener = new SignupListener() {
         @Override
         public void signupSuccess(boolean b) {
-            startActivity(new Intent(getApplicationContext(),HomeActivity.class));
-            finish();
+            goToHomePage();
         }
 
         @Override
         public void signupError(boolean b,String message) {
             Toast.makeText(getApplicationContext(), "Error : "+message, Toast.LENGTH_SHORT).show();
         }
-    };    private final SignupListener resetPassListener = new SignupListener() {
+    };
+
+    private final SignupListener resetPassListener = new SignupListener() {
         @Override
         public void signupSuccess(boolean b) {
             Toast.makeText(getApplicationContext(), "Reset Mail sent!", Toast.LENGTH_SHORT).show();

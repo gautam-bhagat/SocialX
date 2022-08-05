@@ -2,6 +2,7 @@ package com.gautam.socialx.activity;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,9 +21,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gautam.socialx.R;
+import com.gautam.socialx.Shared.SharedPref;
 import com.gautam.socialx.adapters.NewsAdapter;
 import com.gautam.socialx.api.OnSuccesfullFetch;
 import com.gautam.socialx.api.RetroInstance;
+import com.gautam.socialx.api.SelectListener;
 import com.gautam.socialx.model.Articles;
 import com.gautam.socialx.model.NewsResponse;
 import com.gautam.socialx.viewmodels.NewsViewModel;
@@ -37,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
     NewsAdapter newsAdapter;
     NewsViewModel newsViewModel;
     ProgressDialog dialog;
+    private ImageView logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,7 @@ public class HomeActivity extends AppCompatActivity {
         dialog.setTitle("Fetching News...");
 
         searchBox = findViewById(R.id.search_in_newsapi);
+        logout = findViewById(R.id.logoutbtn);
 
         newsRecview = findViewById(R.id.news_recview);
         no_news = findViewById(R.id.no_news);
@@ -69,7 +75,7 @@ public class HomeActivity extends AppCompatActivity {
 
         initControls();
 
-        callAPI("news");
+        callAPI("india");
 
     }
 
@@ -94,6 +100,20 @@ public class HomeActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToLogin();
+            }
+        });
+    }
+
+    private void goToLogin()
+    {
+        SharedPref.sharedPref(getApplicationContext()).setLOGGED(false);
+        startActivity(new Intent(getApplicationContext(),Login.class));
+        finish();
     }
 
     private void callAPI(String searchKeyword)
@@ -105,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void showNews(List<Articles> articles)
     {
-        newsAdapter = new NewsAdapter(getApplicationContext(),articles);
+        newsAdapter = new NewsAdapter(getApplicationContext(),articles,selectListener);
         if(articles.size()==0){
             no_news.setVisibility(View.VISIBLE);
         }else{ no_news.setVisibility(View.GONE);}
@@ -121,6 +141,14 @@ public class HomeActivity extends AppCompatActivity {
         @Override
         public void onError(String message) {
             Log.d("TAG", "onErrorrr: "+message);
+        }
+    };
+
+    private final SelectListener selectListener = new SelectListener() {
+        @Override
+        public void OnNewsClicked(Articles article) {
+           startActivity(new Intent(getApplicationContext(),NewsActivity.class)
+           .putExtra("article",article));
         }
     };
 
